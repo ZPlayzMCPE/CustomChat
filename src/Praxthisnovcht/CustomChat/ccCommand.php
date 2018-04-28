@@ -53,7 +53,7 @@ class ccCommand {
 	 * @param array $args        	
 	 * @return boolean
 	 */
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
 		// disable chat for all players
 		if ((strtolower ( $command->getName () ) == "disablechat")) {
 			$this->pgin->getConfig ()->set ( "disablechat", true ); // config.yml
